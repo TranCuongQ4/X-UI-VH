@@ -6,7 +6,7 @@ Tạo trang quản lý X-UI để tạo Vmess Vless Trojan kết nối 4G Bug SN
 
 ### Chép Code bên dưới vào VPS và chạy
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/X-UI/master/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/X-UI-VH/master/install.sh)
 
 ```
 
