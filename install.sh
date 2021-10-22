@@ -147,4 +147,3 @@ install_x-ui() {
 echo -e "${green}bắt đầu cài đặt${plain}"
 install_base
 install_x-ui $1
-install_speedtest.deb
