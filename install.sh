@@ -147,3 +147,5 @@ install_x-ui() {
 echo -e "${green}bắt đầu cài đặt${plain}"
 install_base
 install_x-ui $1
+curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash
+sudo apt-get install speedtest
