@@ -181,7 +181,7 @@ start() {
         sleep 2
         check_status
         if [[ $? == 0 ]]; then
-            echo -e "${green}x-ui 启动成功${plain}"
+            echo -e "${green}x-ui Đã bắt đầu thành công${plain}"
         else
             echo -e "${red}Bảng điều khiển không khởi động được. Có thể do thời gian khởi động vượt quá hai giây. Vui lòng kiểm tra thông tin nhật ký sau.${plain}"
         fi
@@ -275,7 +275,7 @@ migrate_v2_ui() {
 
 install_bbr() {
     # temporary workaround for installing bbr
-    bash <(curl -L -s https://raw.githubusercontent.com/teddysun/across/master/bbr.sh)
+    bash <(curl -L -s https://raw.githubusercontent.com/TranCuongQ4/BBR/master/bbr.sh)
     echo ""
     before_show_menu
 }
@@ -426,7 +426,7 @@ show_menu() {
  ${green}12.${plain} Đặt x-ui để bắt đầu tự động
  ${green}13.${plain} Hủy khởi động x-ui để bắt đầu tự động
 ————————————————
- ${green}14.${plain} 一Key cài đặt BBR (Tăng Tốc)
+ ${green}14.${plain} 一Cài Đặt BBR (Tăng Tốc) X-UI
  "
     show_status
     echo && read -p "Vui lòng nhập lựa chọn [0-14]: " num
