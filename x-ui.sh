@@ -6,7 +6,7 @@ yellow='\033[0;33m'
 plain='\033[0m'
 
 # check root
-[[ $EUID -ne 0 ]] && echo -e "${red}错误: ${plain} 必须使用root用户运行此脚本！\n" && exit 1
+[[ $EUID -ne 0 ]] && echo -e "${red}Nhận dạng: ${plain} Tập lệnh này phải được chạy với tư cách người dùng gốc！\n" && exit 1
 
 # check os
 if [[ -f /etc/redhat-release ]]; then
@@ -24,7 +24,7 @@ elif cat /proc/version | grep -Eqi "ubuntu"; then
 elif cat /proc/version | grep -Eqi "centos|red hat|redhat"; then
     release="centos"
 else
-    echo -e "${red}未检测到系统版本，请联系脚本作者！${plain}\n" && exit 1
+    echo -e "${red}Phiên bản hệ thống không được phát hiện, vui lòng liên hệ với tác giả kịch bản！${plain}\n" && exit 1
 fi
 
 os_version=""
@@ -39,21 +39,21 @@ fi
 
 if [[ x"${release}" == x"centos" ]]; then
     if [[ ${os_version} -le 6 ]]; then
-        echo -e "${red}请使用 CentOS 7 或更高版本的系统！${plain}\n" && exit 1
+        echo -e "${red}vui lòng sử dụng CentOS 7 Hoặc hệ thống cao hơn！${plain}\n" && exit 1
     fi
 elif [[ x"${release}" == x"ubuntu" ]]; then
     if [[ ${os_version} -lt 16 ]]; then
-        echo -e "${red}请使用 Ubuntu 16 或更高版本的系统！${plain}\n" && exit 1
+        echo -e "${red}vui lòng sử dụng Ubuntu 16 Hoặc hệ thống cao hơn！${plain}\n" && exit 1
     fi
 elif [[ x"${release}" == x"debian" ]]; then
     if [[ ${os_version} -lt 8 ]]; then
-        echo -e "${red}请使用 Debian 8 或更高版本的系统！${plain}\n" && exit 1
+        echo -e "${red}vui lòng sử dụng Debian 8 Hoặc hệ thống cao hơn！${plain}\n" && exit 1
     fi
 fi
 
 confirm() {
     if [[ $# > 1 ]]; then
-        echo && read -p "$1 [默认$2]: " temp
+        echo && read -p "$1 [$ 2 mặc định]: " temp
         if [[ x"${temp}" == x"" ]]; then
             temp=$2
         fi
@@ -68,7 +68,7 @@ confirm() {
 }
 
 confirm_restart() {
-    confirm "是否重启面板，重启面板也会重启 xray" "y"
+    confirm "Có khởi động lại bảng điều khiển hay không, khởi động lại bảng điều khiển cũng sẽ khởi động lại xray" "y"
     if [[ $? == 0 ]]; then
         restart
     else
@@ -77,7 +77,7 @@ confirm_restart() {
 }
 
 before_show_menu() {
-    echo && echo -n -e "${yellow}按回车返回主菜单: ${plain}" && read temp
+    echo && echo -n -e "${yellow}Nhấn enter để quay lại menu chính: ${plain}" && read temp
     show_menu
 }
 
@@ -93,9 +93,9 @@ install() {
 }
 
 update() {
-    confirm "本功能会强制重装当前最新版，数据不会丢失，是否继续?" "n"
+    confirm "Chức năng này sẽ buộc cài đặt lại phiên bản mới nhất hiện tại, dữ liệu sẽ không bị mất, có tiếp tục không?" "n"
     if [[ $? != 0 ]]; then
-        echo -e "${red}已取消${plain}"
+        echo -e "${red}Đã hủy ${plain}"
         if [[ $# == 0 ]]; then
             before_show_menu
         fi
@@ -103,13 +103,13 @@ update() {
     fi
     bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/X-UI-VH/master/install.sh)
     if [[ $? == 0 ]]; then
-        echo -e "${green}更新完成，已自动重启面板${plain}"
+        echo -e "${green}Cập nhật hoàn tất và bảng điều khiển đã được tự động khởi động lại ${plain}"
         exit 0
     fi
 }
 
 uninstall() {
-    confirm "确定要卸载面板吗，xray 也会卸载?" "n"
+    confirm "Bạn có chắc chắn muốn gỡ cài đặt bảng điều khiển không, xray cũng sẽ gỡ cài đặt?" "n"
     if [[ $? != 0 ]]; then
         if [[ $# == 0 ]]; then
             show_menu
@@ -125,7 +125,7 @@ uninstall() {
     rm /usr/local/x-ui/ -rf
 
     echo ""
-    echo -e "卸载成功，如果你想删除此脚本，则退出脚本后运行 ${green}rm /usr/bin/x-ui -f${plain} 进行删除"
+    echo -e "Quá trình gỡ cài đặt thành công. Nếu bạn muốn xóa tập lệnh này, hãy thoát tập lệnh và chạy ${green}rm /usr/bin/x-ui -f${plain} Xóa bỏ"
     echo ""
 
     if [[ $# == 0 ]]; then
@@ -134,7 +134,7 @@ uninstall() {
 }
 
 reset_user() {
-    confirm "确定要将用户名和密码重置为 admin 吗" "n"
+    confirm "Bạn có chắc chắn muốn đặt lại tên người dùng và mật khẩu cho quản trị viên không" "n"
     if [[ $? != 0 ]]; then
         if [[ $# == 0 ]]; then
             show_menu
@@ -142,12 +142,12 @@ reset_user() {
         return 0
     fi
     /usr/local/x-ui/x-ui setting -username admin -password admin
-    echo -e "用户名和密码已重置为 ${green}admin${plain}，现在请重启面板"
+    echo -e "Tên người dùng và mật khẩu đã được đặt lại thành ${green}admin${plain}，Vui lòng khởi động lại bảng điều khiển ngay bây giờ"
     confirm_restart
 }
 
 reset_config() {
-    confirm "确定要重置所有面板设置吗，账号数据不会丢失，用户名和密码不会改变" "n"
+    confirm "Bạn có chắc chắn muốn đặt lại tất cả cài đặt bảng không? Dữ liệu tài khoản sẽ không bị mất, tên người dùng và mật khẩu sẽ không bị thay đổi" "n"
     if [[ $? != 0 ]]; then
         if [[ $# == 0 ]]; then
             show_menu
@@ -155,18 +155,18 @@ reset_config() {
         return 0
     fi
     /usr/local/x-ui/x-ui setting -reset
-    echo -e "所有面板设置已重置为默认值，现在请重启面板，并使用默认的 ${green}54321${plain} 端口访问面板"
+    echo -e "Tất cả cài đặt bảng điều khiển đã được đặt lại về giá trị mặc định, bây giờ vui lòng khởi động lại bảng điều khiển và sử dụng giá trị mặc định ${green}54321${plain} Bảng điều khiển truy cập cổng"
     confirm_restart
 }
 
 set_port() {
-    echo && echo -n -e "输入端口号[1-65535]: " && read port
+    echo && echo -n -e "Nhập số cổng[1-65535]: " && read port
     if [[ -z "${port}" ]]; then
-        echo -e "${yellow}已取消${plain}"
+        echo -e "${yellow}Đã hủy ${plain}"
         before_show_menu
     else
         /usr/local/x-ui/x-ui setting -port ${port}
-        echo -e "设置端口完毕，现在请重启面板，并使用新设置的端口 ${green}${port}${plain} 访问面板"
+        echo -e "Sau khi thiết lập cổng, vui lòng khởi động lại bảng điều khiển và sử dụng cổng mới đặt ${green}${port}${plain} Bảng điều khiển truy cập"
         confirm_restart
     fi
 }
@@ -175,7 +175,7 @@ start() {
     check_status
     if [[ $? == 0 ]]; then
         echo ""
-        echo -e "${green}面板已运行，无需再次启动，如需重启请选择重启${plain}"
+        echo -e "${green}Bảng đã chạy rồi, không cần khởi động lại, nếu cần khởi động lại, vui lòng chọn khởi động lại ${plain}"
     else
         systemctl start x-ui
         sleep 2
@@ -183,7 +183,7 @@ start() {
         if [[ $? == 0 ]]; then
             echo -e "${green}x-ui 启动成功${plain}"
         else
-            echo -e "${red}面板启动失败，可能是因为启动时间超过了两秒，请稍后查看日志信息${plain}"
+            echo -e "${red}Bảng điều khiển không khởi động được. Có thể do thời gian khởi động vượt quá hai giây. Vui lòng kiểm tra thông tin nhật ký sau.${plain}"
         fi
     fi
 
@@ -196,15 +196,15 @@ stop() {
     check_status
     if [[ $? == 1 ]]; then
         echo ""
-        echo -e "${green}面板已停止，无需再次停止${plain}"
+        echo -e "${green}Bảng điều khiển đã dừng, không cần dừng lại${plain}"
     else
         systemctl stop x-ui
         sleep 2
         check_status
         if [[ $? == 1 ]]; then
-            echo -e "${green}x-ui 与 xray 停止成功${plain}"
+            echo -e "${green}x-ui Dừng với xray thành công${plain}"
         else
-            echo -e "${red}面板停止失败，可能是因为停止时间超过了两秒，请稍后查看日志信息${plain}"
+            echo -e "${red}Bảng điều khiển không dừng được. Có thể do thời gian dừng vượt quá hai giây. Vui lòng kiểm tra thông tin nhật ký sau.${plain}"
         fi
     fi
 
@@ -218,9 +218,9 @@ restart() {
     sleep 2
     check_status
     if [[ $? == 0 ]]; then
-        echo -e "${green}x-ui 与 xray 重启成功${plain}"
+        echo -e "${green}x-ui Khởi động lại thành công với xray${plain}"
     else
-        echo -e "${red}面板重启失败，可能是因为启动时间超过了两秒，请稍后查看日志信息${plain}"
+        echo -e "${red}Khởi động lại bảng điều khiển không thành công, có thể do thời gian khởi động vượt quá hai giây, vui lòng kiểm tra thông tin nhật ký sau${plain}"
     fi
     if [[ $# == 0 ]]; then
         before_show_menu
@@ -237,9 +237,9 @@ status() {
 enable() {
     systemctl enable x-ui
     if [[ $? == 0 ]]; then
-        echo -e "${green}x-ui 设置开机自启成功${plain}"
+        echo -e "${green}x-ui Đặt chế độ tự động bật nguồn thành công${plain}"
     else
-        echo -e "${red}x-ui 设置开机自启失败${plain}"
+        echo -e "${red}x-ui Không đặt được chế độ tự khởi động sau khi bật nguồn${plain}"
     fi
 
     if [[ $# == 0 ]]; then
@@ -250,9 +250,9 @@ enable() {
 disable() {
     systemctl disable x-ui
     if [[ $? == 0 ]]; then
-        echo -e "${green}x-ui 取消开机自启成功${plain}"
+        echo -e "${green}x-ui Hủy tự động bật nguồn thành công${plain}"
     else
-        echo -e "${red}x-ui 取消开机自启失败${plain}"
+        echo -e "${red}x-ui Hủy bỏ khởi động thất bại${plain}"
     fi
 
     if [[ $# == 0 ]]; then
@@ -284,11 +284,11 @@ update_shell() {
     wget -O /usr/bin/x-ui -N --no-check-certificate https://github.com/TranCuongQ4/X-UI-VH/raw/master/x-ui.sh
     if [[ $? != 0 ]]; then
         echo ""
-        echo -e "${red}下载脚本失败，请检查本机能否连接 Github${plain}"
+        echo -e "${red}Không thể tải xuống tập lệnh, vui lòng kiểm tra xem máy có thể kết nối được Github không ${plain}"
         before_show_menu
     else
         chmod +x /usr/bin/x-ui
-        echo -e "${green}升级脚本成功，请重新运行脚本${plain}" && exit 0
+        echo -e "${green}Tập lệnh nâng cấp thành công, vui lòng chạy lại tập lệnh${plain}" && exit 0
     fi
 }
 
@@ -318,7 +318,7 @@ check_uninstall() {
     check_status
     if [[ $? != 2 ]]; then
         echo ""
-        echo -e "${red}面板已安装，请不要重复安装${plain}"
+        echo -e "${red}Bảng điều khiển đã được cài đặt, vui lòng không cài đặt nhiều lần${plain}"
         if [[ $# == 0 ]]; then
             before_show_menu
         fi
@@ -332,7 +332,7 @@ check_install() {
     check_status
     if [[ $? == 2 ]]; then
         echo ""
-        echo -e "${red}请先安装面板${plain}"
+        echo -e "${red}Vui lòng cài đặt bảng điều khiển trước${plain}"
         if [[ $# == 0 ]]; then
             before_show_menu
         fi
@@ -346,15 +346,15 @@ show_status() {
     check_status
     case $? in
         0)
-            echo -e "面板状态: ${green}已运行${plain}"
+            echo -e "Trạng thái bảng điều khiển: ${green}Đã chạy${plain}"
             show_enable_status
             ;;
         1)
-            echo -e "面板状态: ${yellow}未运行${plain}"
+            echo -e "Trạng thái bảng điều khiển: ${yellow}Không chạy${plain}"
             show_enable_status
             ;;
         2)
-            echo -e "面板状态: ${red}未安装${plain}"
+            echo -e "Trạng thái bảng điều khiển: ${red}Chưa cài đặt${plain}"
     esac
     show_xray_status
 }
@@ -362,9 +362,9 @@ show_status() {
 show_enable_status() {
     check_enabled
     if [[ $? == 0 ]]; then
-        echo -e "是否开机自启: ${green}是${plain}"
+        echo -e "Có tự động khởi động sau khi khởi động không: ${green}đúng${plain}"
     else
-        echo -e "是否开机自启: ${red}否${plain}"
+        echo -e "Có tự động khởi động sau khi khởi động không: ${red}không${plain}"
     fi
 }
 
@@ -380,56 +380,56 @@ check_xray_status() {
 show_xray_status() {
     check_xray_status
     if [[ $? == 0 ]]; then
-        echo -e "xray 状态: ${green}运行${plain}"
+        echo -e "xray tiểu bang: ${green}chạy${plain}"
     else
-        echo -e "xray 状态: ${red}未运行${plain}"
+        echo -e "xray tiểu bang: ${red}Không chạy${plain}"
     fi
 }
 
 show_usage() {
-    echo "x-ui 管理脚本使用方法: "
+    echo "x-ui Cách sử dụng tập lệnh quản lý: "
     echo "------------------------------------------"
-    echo "x-ui              - 显示管理菜单 (功能更多)"
-    echo "x-ui start        - 启动 x-ui 面板"
-    echo "x-ui stop         - 停止 x-ui 面板"
-    echo "x-ui restart      - 重启 x-ui 面板"
-    echo "x-ui status       - 查看 x-ui 状态"
-    echo "x-ui enable       - 设置 x-ui 开机自启"
-    echo "x-ui disable      - 取消 x-ui 开机自启"
-    echo "x-ui log          - 查看 x-ui 日志"
-    echo "x-ui v2-ui        - 迁移本机器的 v2-ui 账号数据至 x-ui"
-    echo "x-ui update       - 更新 x-ui 面板"
-    echo "x-ui install      - 安装 x-ui 面板"
-    echo "x-ui uninstall    - 卸载 x-ui 面板"
+    echo "x-ui              - Menu quản lý màn hình (nhiều chức năng hơn)"
+    echo "x-ui start        - Khởi chạy bảng điều khiển x-ui"
+    echo "x-ui stop         - Dừng bảng điều khiển x-ui"
+    echo "x-ui restart      - Khởi động lại bảng điều khiển x-ui"
+    echo "x-ui status       - Xem trạng thái x-ui"
+    echo "x-ui enable       - Đặt x-ui để bắt đầu tự động"
+    echo "x-ui disable      - Hủy khởi động x-ui để bắt đầu tự động"
+    echo "x-ui log          - Xem nhật ký x-ui"
+    echo "x-ui v2-ui        - Di chuyển dữ liệu tài khoản v2-ui của máy này sang x-ui"
+    echo "x-ui update       - Cập nhật bảng điều khiển x-ui"
+    echo "x-ui install      - Cài đặt bảng điều khiển x-ui"
+    echo "x-ui uninstall    - Gỡ cài đặt bảng điều khiển x-ui"
     echo "------------------------------------------"
 }
 
 show_menu() {
     echo -e "
-  ${green}x-ui 面板管理脚本${plain}
-  ${green}0.${plain} 退出脚本
+  ${green}x-ui Tập lệnh quản lý bảng điều khiển${plain}
+  ${green}0.${plain} Tập lệnh thoát
 ————————————————
-  ${green}1.${plain} 安装 x-ui
-  ${green}2.${plain} 更新 x-ui
-  ${green}3.${plain} 卸载 x-ui
+  ${green}1.${plain} Cài đặt x-ui
+  ${green}2.${plain} thay mới x-ui
+  ${green}3.${plain} Gỡ cài đặt x-ui
 ————————————————
-  ${green}4.${plain} 重置用户名密码
-  ${green}5.${plain} 重置面板设置
-  ${green}6.${plain} 设置面板端口
+  ${green}4.${plain} Đặt lại tên người dùng và mật khẩu
+  ${green}5.${plain} Đặt lại cài đặt bảng điều khiển
+  ${green}6.${plain} Đặt cổng bảng điều khiển
 ————————————————
-  ${green}7.${plain} 启动 x-ui
-  ${green}8.${plain} 停止 x-ui
-  ${green}9.${plain} 重启 x-ui
- ${green}10.${plain} 查看 x-ui 状态
- ${green}11.${plain} 查看 x-ui 日志
+  ${green}7.${plain} khởi động x-ui
+  ${green}8.${plain} ngừng lại x-ui
+  ${green}9.${plain} Khởi động lại x-ui
+ ${green}10.${plain} Đánh dấu x-ui tiểu bang
+ ${green}11.${plain} Đánh dấu x-ui Nhật ký
 ————————————————
- ${green}12.${plain} 设置 x-ui 开机自启
- ${green}13.${plain} 取消 x-ui 开机自启
+ ${green}12.${plain} Đặt x-ui để bắt đầu tự động
+ ${green}13.${plain} Hủy khởi động x-ui để bắt đầu tự động
 ————————————————
- ${green}14.${plain} 一键安装 bbr (最新内核)
+ ${green}14.${plain} 一Key cài đặt BBR (Tăng Tốc)
  "
     show_status
-    echo && read -p "请输入选择 [0-14]: " num
+    echo && read -p "Vui lòng nhập lựa chọn [0-14]: " num
 
     case "${num}" in
         0) exit 0
@@ -462,7 +462,7 @@ show_menu() {
         ;;
         14) install_bbr
         ;;
-        *) echo -e "${red}请输入正确的数字 [0-14]${plain}"
+        *) echo -e "${red}Vui lòng nhập số chính xác [0-14]${plain}"
         ;;
     esac
 }
