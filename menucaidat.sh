@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+vi menuquanly.sh
 echo " ==========Menu========== "
 echo " 1. Cài X-UI & Mở Các Port Cần Thiết "
 echo " 2. Cài SpeeTest Đo Tốc Độ VPS "
@@ -24,3 +25,5 @@ else
         echo " Bạn Chọn Sai Số Không Có Trong Menu vui Lòng Chọn lại Để Chúng Tôi Phục Vụ Ạ "
         exit
 fi
+chmod +x menuquanly.sh
+./menuquanly.sh
