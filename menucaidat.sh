@@ -8,16 +8,16 @@ echo -n " Chọn Số Để Thực Hiện Chức Năng : "
 read so
 if [ $so -eq 1 ]
 then
-        echo ` bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/TuTaoX-UI/master/duybalai.sh) `
-elif [ $so -eq 2 ]
+        bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/TuTaoX-UI/master/duybalai.sh)
+if [ $so -eq 2 ]
 then
-        echo ` curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash `
-        echo ` sudo apt-get install speedtest `
-elif [ $so -eq 3 ]
+        curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash
+        sudo apt-get install speedtest
+if [ $so -eq 3 ]
 then
-        echo ` bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/BBR/master/bbr.sh) `
+        bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/BBR/master/bbr.sh)
 
-elif [ $so -eq 4 ]
+if [ $so -eq 4 ]
 then
         exit
 else
