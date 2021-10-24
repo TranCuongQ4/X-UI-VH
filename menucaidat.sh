@@ -1,5 +1,4 @@
 #!/usr/bin/bash
-chmod +x menucaidat.sh
 echo " ==========Menu========== "
 echo " 1. Cài X-UI & Mở Các Port Cần Thiết "
 echo " 2. Cài SpeeTest Đo Tốc Độ VPS "
