@@ -1,3 +1,4 @@
+#!/bin/bash
 show_menu() {
     echo -e "
   ${green}Menu Tuỳ Chọn Cài Đặt VPS Thiết Kế Bởi Trần Cường${plain}  
