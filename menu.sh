@@ -1,30 +1,26 @@
 #!/bin/bash
-# Bash Menu Script Example
+echo "==========Menu=========="
+echo "1. Cài X-UI & Mở Các Port Cần Thiết"
+echo "2. Cài SpeeTest Đo Tốc Độ VPS"
+echo "3. Cài Tăng Tốc VPS"
+echo "4. Thoát"
+echo -n "Chọn Số Để Thực Hiện Chức Năng :"
+read so
+if [ $so -eq 1 ]
+then
+        echo `bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/TuTaoX-UI/master/duybalai.sh)`
+elif [ $so -eq 2 ]
+then
+        echo `curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash`
+        echo `sudo apt-get install speedtest`
+elif [ $so -eq 3 ]
+then
+        echo `bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/BBR/master/bbr.sh)`
 
-show_menu() {
-    echo -e "
-  ${green}Menu Tuỳ Chọn Cài Đặt VPS Thiết Kế Bởi Trần Cường${plain}  
-———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-  ${green}1.${plain} Cài Đặt X-UI & Mở Port (54321,80,80/tcp,443) Mọi Người Mở Port Thêm Thì Dùng Lệnh (afw allow port-mở) 
-  ${green}2.${plain} Cài Đặt SpeedTest Giúp kiểm Tra Tốc Độ VPS
-  ${green}3.${plain} Cài Đặt Tăng Tốc Giúp VPS Chạy Mượt Hơn
-————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-  ${green}0.${plain} Thoát
- "
-    show_status
-    echo && read -p "Vui lòng nhập lựa chọn [0-3]: " num
-
-    case "${num}" in      
-        1) bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/TuTaoX-UI/master/duybalai.sh)
-        ;;
-        2) curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash && sudo apt-get install speedtest
-        ;;
-        3) bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/BBR/master/bbr.sh)        
-        ;;
-        0) exit 0
-        ;;
-        *) echo -e "${red}Vui lòng nhập số chính xác [0-14]${plain}"
-        ;;
-    esac
-}
-    show_menu
+elif [ $so -eq 4 ]
+then
+        exit
+else
+        echo "Bạn Chọn Sai Số Không Có Trong Menu vui Lòng Chọn lại Để Chúng Tôi Phục Vụ Ạ"
+        exit
+fi
