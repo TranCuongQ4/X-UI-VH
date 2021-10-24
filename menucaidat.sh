@@ -26,7 +26,7 @@ else
         echo " Bạn Chọn Sai Số Không Có Trong Menu vui Lòng Chọn lại Để Chúng Tôi Phục Vụ Ạ "
         exit
 fi
-esc
+Esc
 :wq
 chmod +x menuquanly.sh
 ./menuquanly.sh
