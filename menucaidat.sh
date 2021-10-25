@@ -14,7 +14,8 @@ echo " 4. Kiểm Tra Tốc Độ VPS Ngay Bây Giờ ( cài dòng 2 tức là đ
 echo " 5. Sửa Lổi Lệnh x-ui Không Hoạt Động Khi Chọn "
 echo " 6. Đổi Mật Khẩu Của VPS (tránh người ta biết ip VPS của bạn mà vào) "
 echo " 7. Xoá X-UI "
-echo " 8. Thoát "
+echo " 8. Đặt Lại User & Pass Trên X-UI Do Quên (Trở Về Mặc Định Là admin Hết) "
+echo " 9. Thoát "
 echo " "
 echo " ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ "
 echo " ▀▄▀▄▀▄                                                                                          ▀▄▀▄▀▄ "
@@ -92,8 +93,19 @@ then
         echo " "
         x-ui uninstall
         echo " "
-        ./menucaidat.sh        
+        ./menucaidat.sh
 elif [ $so -eq 8 ]
+then
+        clear
+        echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★Chúng Tôi Bắt Đầu Khôi Phục Lại User & Pass Cho Bạn★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ "
+        echo " User & Pass Sẽ trở Về Là admin Như Khi Mới Tạo X-UI "
+        echo " Bạn Chỉ Cần Nhấn y Hai Lần Là Xong "
+        echo " Bắt Đầu Khôi Phục... "
+        echo " "
+        x-ui reset_user
+        echo " "
+        ./menucaidat.sh          
+elif [ $so -eq 9 ]
 then
         echo " "
         clear
