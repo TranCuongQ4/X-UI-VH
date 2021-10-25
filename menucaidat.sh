@@ -99,13 +99,10 @@ then
         clear
         echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★Chúng Tôi Bắt Đầu Khôi Phục Lại User & Pass Cho Bạn★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ "
         echo " User & Pass Sẽ trở Về Là admin Như Khi Mới Tạo X-UI "
-        echo " Bạn Chỉ Cần Nhấn y Hai Lần Là Xong "
+        echo " Bạn Chỉ Cần Nhấn 4 y Hai Lần Là Xong "
         echo " Bắt Đầu Khôi Phục... "
         echo " "
         x-ui
-        4
-        y
-        y
         echo " "
         ./menucaidat.sh          
 elif [ $so -eq 9 ]
