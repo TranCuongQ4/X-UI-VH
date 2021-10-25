@@ -69,6 +69,8 @@ then
         echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ Bắt Đầu Đổi Mật Khẩu VPS Cho Bạn ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ "
         echo " ★★★ Mời Bạn Nhập Vào Mật Khẩu Và Xác Nhận Lại Mật Khẩu ★★★ "
         echo " ★★★ Mật Khẩu Do Bảo Mật Nên Không Hiện Ra Nhưng Bạn Cứ Nhấn Chúng Tôi Bảo vệ Cá Nhân Cho Bạn ★★★ "
+        echo " "
+        echo " Bắt Đầu Nhập... "
         passwd
         ./menucaidat.sh       
 elif [ $so -eq 7 ]
