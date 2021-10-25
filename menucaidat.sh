@@ -75,6 +75,7 @@ then
         echo " "
         echo " Bắt Đầu Nhập... "
         passwd
+        echo " Chúc Mừng Bạn Đã Thay Đổi Mật Khẩu Thành Công Hãy Nhớ Và Không Cho Người Khác Biết Tránh Bị Mất VPS Nhé "
         ./menucaidat.sh       
 elif [ $so -eq 7 ]
 then
