@@ -1,5 +1,4 @@
 #!/usr/bin/bash
-echo ' clear '
 echo " ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ "
 echo " ▀▄▀▄▀▄                                                                                          ▀▄▀▄▀▄ "
 echo " ▀▄▀▄▀▄                                    Trần Cường Thiết Kế Tool                              ▀▄▀▄▀▄ "
@@ -25,25 +24,34 @@ echo -n " Chọn Số Để Thực Hiện Chức Năng : "
 read so
 if [ $so -eq 1 ]
 then
+        clear
+        echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ Triển Khai Theo Lệnh Của Bạn ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ "
         bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/TuTaoX-UI/master/duybalai.sh)
         ./menucaidat.sh
 elif [ $so -eq 2 ]
 then
+        clear
+        echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ Triển Khai Cài Đặt Speedtest Ngay ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ "
         curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash
         sudo apt-get install speedtest
         ./menucaidat.sh
 elif [ $so -eq 3 ]
 then
+        clear
+        echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ Triển Khai Tăng Tốc Cho Bạn Nhấn Enter Để Tiếp Tục ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ "
         bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/BBR/master/bbr.sh)
         ./menucaidat.sh
 elif [ $so -eq 4 ]
 then
+        clear
         echo " Nếu Bạn Đã Cài Dòng 2 Thì Chúng Tôi Thực Hiện Kiểm Tra Liền Cho Bạn . Còn Bạn Chưa Cài Thì Chúng Tôi Không Kiểm Tra Tốc Độ Được "
         echo " "
         speedtest
         ./menucaidat.sh
 elif [ $so -eq 5 ]
 then
+        clear
+        echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ Triển Khai Sửa Lệnh X-UI Cho Bạn ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ "
         bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/X-UI/master/install.sh)
         ./menucaidat.sh        
 elif [ $so -eq 6 ]
@@ -55,6 +63,7 @@ then
         rm menucaidat.sh
         exit        
 else
+        clear
         echo " ╠═══════════════════════════════════════════Chọn Số Không Phù Hợp Trong Bảng Điều Khiển═══════════════════════════════════════════╣ "
         echo " "
         echo " Bạn Chọn Sai Số Không Có Trong Menu Vui Lòng Chọn Lại Để Chúng Tôi Phục Vụ Ạ "
