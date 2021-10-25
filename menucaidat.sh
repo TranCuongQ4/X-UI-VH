@@ -28,10 +28,10 @@ then
         clear
         echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ Triển Khai Theo Lệnh Của Bạn ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ "
         bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/X-UI/master/install.sh)
-        afw allow 54321
-        afw allow 443
-        afw allow 80
-        afw allow 80/tcp
+        ufw allow 54321
+        ufw allow 443
+        ufw allow 80
+        ufw allow 80/tcp
         echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ Đã Hoàn Tất Việc Cài X-UI & Mở Các Cổng Cơ Bản ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ "
         echo " ★★★ Giờ Bạn Có Thể Vào Web Theo IP VPS :54321 Use Và Pass Đều Là Admin . Hãy Thay Đổi hết Các Thông Tin Đó Tránh Bị Mất ★★★ "
         echo " ★★★ Nhớ Đổi Cổng 54321 Thành Bất Kỳ Cổng Nào Nhớ Để 5 Đầu Nha . Ví Dụ 5xxxx ★★★ "
@@ -89,7 +89,8 @@ then
         exit        
 else
         clear
-        echo " ╠═══════════════════════════════════════════Chọn Số Không Phù Hợp Trong Bảng Điều Khiển═══════════════════════════════════════════╣ "        
+        echo " ╠═══════════════════════════════════════════Chọn Số Không Phù Hợp Trong Bảng Điều Khiển═══════════════════════════════════════════╣ "
+        echo " "
         echo " Bạn Chọn Sai Số Không Có Trong Menu Vui Lòng Chọn Lại Để Chúng Tôi Phục Vụ Ạ "        
         ./menucaidat.sh
 fi
