@@ -26,7 +26,9 @@ read so
 if [ $so -eq 1 ]
 then
         clear
-        echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ Triển Khai Theo Lệnh Của Bạn ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ "
+        echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ Triển Khai Cài Đặt X-UI Cho Bạn ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ "
+        echo " Tiến Hành ... "
+        apt-get update -y
         bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/X-UI/master/install.sh)
         ufw allow 54321
         ufw allow 443
