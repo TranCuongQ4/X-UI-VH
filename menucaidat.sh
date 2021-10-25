@@ -135,6 +135,10 @@ then
         rm menucaidat.sh.3
         rm menucaidat.sh.4
         rm menucaidat.sh.5
+        rm menucaidat.sh.6
+        rm menucaidat.sh.7
+        rm menucaidat.sh.8
+        rm menucaidat.sh.9
         clear
         exit        
 else
