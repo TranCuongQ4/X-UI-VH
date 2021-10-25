@@ -92,7 +92,6 @@ else
         clear
         echo " ╠═══════════════════════════════════════════Chọn Số Không Phù Hợp Trong Bảng Điều Khiển═══════════════════════════════════════════╣ "
         echo " "
-        echo " Bạn Chọn Sai Số Không Có Trong Menu Vui Lòng Chọn Lại Để Chúng Tôi Phục Vụ Ạ "
-        echo " "
+        echo " Bạn Chọn Sai Số Không Có Trong Menu Vui Lòng Chọn Lại Để Chúng Tôi Phục Vụ Ạ "        
         ./menucaidat.sh
 fi
