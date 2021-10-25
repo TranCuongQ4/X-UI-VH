@@ -130,6 +130,12 @@ then
         echo " "
         echo " ★★★Xin Chào Hẹn Gặp Lại★★★ "
         rm menucaidat.sh
+        rm menucaidat.sh.1
+        rm menucaidat.sh.2
+        rm menucaidat.sh.3
+        rm menucaidat.sh.4
+        rm menucaidat.sh.5
+        clear
         exit        
 else
         clear
