@@ -102,7 +102,7 @@ then
         echo " Bạn Chỉ Cần Nhấn 4 y Hai Lần Là Xong "
         echo " Bắt Đầu Khôi Phục... "
         echo " "
-        x-ui
+        x-ui && 4 && y && y
         echo " "
         ./menucaidat.sh          
 elif [ $so -eq 9 ]
