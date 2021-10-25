@@ -21,7 +21,7 @@ echo " ▀▄▀▄▀▄    Gọi Cho Minh Duy Để Có Giá VPS Hợp Lý Nh�
 echo " ▀▄▀▄▀▄                                                                                          ▀▄▀▄▀▄ "
 echo " ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ "
 echo " "
-echo -n " Chọn Số Để Chúng Tôi Cài Đặt Mời Bạn Nhập Số ==>> : "
+echo -n " Chọn Số Để Chúng Tôi Cài Đặt Mời Bạn Nhập Số :  "
 read so
 if [ $so -eq 1 ]
 then
@@ -89,8 +89,7 @@ then
         exit        
 else
         clear
-        echo " ╠═══════════════════════════════════════════Chọn Số Không Phù Hợp Trong Bảng Điều Khiển═══════════════════════════════════════════╣ "
-        echo " "
+        echo " ╠═══════════════════════════════════════════Chọn Số Không Phù Hợp Trong Bảng Điều Khiển═══════════════════════════════════════════╣ "        
         echo " Bạn Chọn Sai Số Không Có Trong Menu Vui Lòng Chọn Lại Để Chúng Tôi Phục Vụ Ạ "        
         ./menucaidat.sh
 fi
