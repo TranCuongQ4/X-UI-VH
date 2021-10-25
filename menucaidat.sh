@@ -99,8 +99,9 @@ then
         clear
         echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★Chúng Tôi Bắt Đầu Khôi Phục Lại User & Pass Cho Bạn★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ "
         echo " User & Pass Sẽ trở Về Là admin Như Khi Mới Tạo X-UI "
-        echo " ███████████ Bạn Chỉ Cần Nhấn 4 y Hai Lần Là Xong . Bấm Bậy Sẽ Hư Luôn X-UI Của Bạn ███████████ "
+        echo " ███████████ Bạn Chỉ Cần Nhấn 4 Cùng y Hai Lần Và Nhấn Thêm 0 Nữa Là Xong . Bấm Bậy Sẽ Hư Luôn X-UI Của Bạn ███████████ "
         echo " Bắt Đầu Khôi Phục... "
+        echo " Nhớ Công Thức 4 - y - y - 0 Nhé "
         echo " "
         x-ui
         echo " "
