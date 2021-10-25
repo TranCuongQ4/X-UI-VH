@@ -85,7 +85,6 @@ then
         echo " ███████████ Nếu Muốn Gọi Tôi Hãy Dùng Lệnh Như Ban Đầu Là : bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/TuTaoX-UI/master/menutrancuong.sh) ██████████ "
         echo " "
         echo " ★★★★★★★★★★★★★★★★★★★★★★★ Xin Chào Hẹn Gặp Lại ★★★★★★★★★★★★★★★★★★★★★★★ "
-        echo " "
         rm menucaidat.sh
         exit        
 else
