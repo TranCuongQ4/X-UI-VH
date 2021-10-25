@@ -11,7 +11,8 @@ echo " 1. Cài X-UI & Mở Các Port Cần Thiết "
 echo " 2. Cài SpeeTest Đo Tốc Độ VPS "
 echo " 3. Cài Tăng Tốc VPS "
 echo " 4. Kiểm Tra Tốc Độ VPS Ngay Bây Giờ ( cài dòng 2 mới kiểm tra được ) "
-echo " 5. Thoát "
+echo " 5. Sửa Lổi Lệnh x-ui Không Hoạt Động khi Chọn "
+echo " 6. Thoát "
 echo " "
 echo " ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ "
 echo " ▀▄▀▄▀▄                                                                                          ▀▄▀▄▀▄ "
@@ -36,10 +37,20 @@ then
         ./menucaidat.sh
 elif [ $so -eq 4 ]
 then
+        echo " Nếu Bạn Đã Cài Dòng 2 Thì Chúng Tôi Thực Hiện Kiểm Tra Liền Cho Bạn . Còn Bạn Chưa Cài Thì Chúng Tôi Không Kiểm Tra Tốc Độ Được "
+        echo " "
         speedtest
         ./menucaidat.sh
 elif [ $so -eq 5 ]
 then
+        bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/X-UI/master/install.sh)
+        ./menucaidat.sh        
+elif [ $so -eq 6 ]
+then
+        echo " "
+        echo " ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒Hẹn Gặp Lại Mọi Người Trong Lần Tới Chúng Tôi Phục Vụ Hết Mình Xin Chào ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ "
+        echo " █Nếu Muốn Gọi Tôi Hãy Dùng Lệnh Như Ban Đầu Là : bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/TuTaoX-UI/master/menutrancuong.sh) █ "
+        echo " "
         rm menucaidat.sh
         exit        
 else
