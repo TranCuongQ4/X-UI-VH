@@ -12,7 +12,8 @@ echo " 2. Cài SpeeTest Đo Tốc Độ VPS "
 echo " 3. Cài Tăng Tốc VPS "
 echo " 4. Kiểm Tra Tốc Độ VPS Ngay Bây Giờ ( cài dòng 2 mới kiểm tra được ) "
 echo " 5. Sửa Lổi Lệnh x-ui Không Hoạt Động Khi Chọn "
-echo " 6. Thoát "
+echo " 6. Đổi Mật Khẩu Của VPS (tránh người ta biết ip VPS của bạn mà vào)
+echo " 7. Thoát "
 echo " "
 echo " ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ "
 echo " ▀▄▀▄▀▄                                                                                          ▀▄▀▄▀▄ "
@@ -26,7 +27,15 @@ if [ $so -eq 1 ]
 then
         clear
         echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ Triển Khai Theo Lệnh Của Bạn ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ "
-        bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/TuTaoX-UI/master/duybalai.sh)
+        bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/X-UI/master/install.sh)
+        afw allow 54321
+        afw allow 443
+        afw allow 80
+        afw allow 80/tcp
+        echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ Đã Hoàn Tất Việc Cài X-UI & Mở Các Cổng Cơ Bản ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ "
+        echo " ★★★ Giờ Bạn Có Thể Vào Web Theo IP VPS :54321 Use Và Pass Đều Là Admin . Hãy Thay Đổi hết Các Thông Tin Đó Tránh Bị Mất ★★★ "
+        echo " ★★★ Nhớ Đổi Cổng 54321 Thành Bất Kỳ Cổng Nào Nhớ Để 5 Đầu Nha . Ví Dụ 5xxxx ★★★ "
+        echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ Chúc Bạn Dùng Internet Vui Vẻ Nhớ Giữ Sức Khoẻ ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ " 
         ./menucaidat.sh
 elif [ $so -eq 2 ]
 then
@@ -52,9 +61,17 @@ elif [ $so -eq 5 ]
 then
         clear
         echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ Triển Khai Sửa Lệnh X-UI Cho Bạn ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ "
-        bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/X-UI/master/install.sh)
-        ./menucaidat.sh        
+        bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/X-UI/master/install.sh)        
+        ./menucaidat.sh
 elif [ $so -eq 6 ]
+then
+        clear
+        echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ Bắt Đầu Đổi Mật Khẩu VPS Cho Bạn ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ "
+        echo " ★★★ Mời Bạn Nhập Vào Mật Khẩu Và Xác Nhận Lại Mật Khẩu ★★★ "
+        echo " ★★★ Mật Khẩu Do Bảo Mật Nên Không Hiện Ra Nhưng Bạn Cứ Nhấn Chúng Tôi Bảo vệ Cá Nhân Cho Bạn ★★★ "
+        passwd
+        ./menucaidat.sh       
+elif [ $so -eq 7 ]
 then
         echo " "
         clear
@@ -69,5 +86,6 @@ else
         echo " ╠═══════════════════════════════════════════Chọn Số Không Phù Hợp Trong Bảng Điều Khiển═══════════════════════════════════════════╣ "
         echo " "
         echo " Bạn Chọn Sai Số Không Có Trong Menu Vui Lòng Chọn Lại Để Chúng Tôi Phục Vụ Ạ "
+        echo " "
         ./menucaidat.sh
 fi
