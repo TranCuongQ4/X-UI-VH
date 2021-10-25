@@ -1,5 +1,4 @@
 #!/usr/bin/bash
-red=
 echo " ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ "
 echo " ▀▄▀▄▀▄                                                                                          ▀▄▀▄▀▄ "
 echo " ▀▄▀▄▀▄                                    Trần Cường Thiết Kế Tool                              ▀▄▀▄▀▄ "
@@ -11,7 +10,8 @@ echo " "
 echo " 1. Cài X-UI & Mở Các Port Cần Thiết "
 echo " 2. Cài SpeeTest Đo Tốc Độ VPS "
 echo " 3. Cài Tăng Tốc VPS "
-echo " 4. Thoát "
+echo " 4. Kiểm Tra Tốc Độ VPS Ngay Bây Giờ ( cài dòng 2 mới kiểm tra được ) "
+echo " 5. Thoát "
 echo " "
 echo " ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ "
 echo " ▀▄▀▄▀▄                                                                                          ▀▄▀▄▀▄ "
@@ -34,8 +34,11 @@ elif [ $so -eq 3 ]
 then
         bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/BBR/master/bbr.sh)
         ./menucaidat.sh
-
 elif [ $so -eq 4 ]
+then
+        speedtest
+        ./menucaidat.sh
+elif [ $so -eq 5 ]
 then
         rm menucaidat.sh
         exit        
