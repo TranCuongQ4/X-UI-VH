@@ -102,7 +102,10 @@ then
         echo " Bạn Chỉ Cần Nhấn y Hai Lần Là Xong "
         echo " Bắt Đầu Khôi Phục... "
         echo " "
-        x-ui reset_user
+        x-ui
+        4
+        y
+        y
         echo " "
         ./menucaidat.sh          
 elif [ $so -eq 9 ]
