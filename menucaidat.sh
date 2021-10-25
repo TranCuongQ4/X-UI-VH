@@ -33,8 +33,8 @@ then
 
 elif [ $so -eq 4 ]
 then
-        exit
         rm menucaidat.sh
+        exit        
 else
         echo " Bạn Chọn Sai Số Không Có Trong Menu vui Lòng Chọn lại Để Chúng Tôi Phục Vụ Ạ "
         ./menucaidat.sh
