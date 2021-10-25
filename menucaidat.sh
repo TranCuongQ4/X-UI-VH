@@ -16,7 +16,7 @@ echo " 6. Đổi Mật Khẩu Của VPS (tránh người ta biết ip VPS của 
 echo " 7. Xoá X-UI "
 echo " 8. Đặt Lại User & Pass Trên X-UI Do Quên (Trở Về Mặc Định Là admin Hết) "
 echo " 9. Khởi Động Lại X-UI & VPS Cho Thoáng Băng Thông 4G (Lưu Ý Khi Khởi Động Lại VPS Sẽ Mất Kết Nối 20s Sau Đó Bạn Kết Nối VPS Lại Nhé "
-echo " 10. Thoát "
+echo " 0. Thoát "
 echo " "
 echo " ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ "
 echo " ▀▄▀▄▀▄                                            ▀▄▀▄▀▄ "
@@ -120,7 +120,7 @@ then
         rm menucaidat.sh
         reboot
         exit               
-elif [ $so -eq 10 ]
+elif [ $so -eq 0 ]
 then
         echo " "
         clear
