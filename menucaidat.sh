@@ -7,10 +7,10 @@ echo " ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄�
 echo " "
 echo " .•♫•♬•.•♫•♬•.•♫•♬•.•♫•♬•.•♫•♬•.•♫•♬•.•♫•♬•Menu Cài Đặt VPS.•♫•♬•.•♫•♬•.•♫•♬•.•♫•♬•.•♫•♬•.•♫•♬• "
 echo " "
-echo " 1. Cài X-UI & Mở Các Port Cần Thiết "
-echo " 2. Cài SpeeTest Đo Tốc Độ VPS "
+echo " 1. Cài X-UI & Mở Các Port Cần Thiết (Lưu Ý Nếu Muốn Xoá X-Ui Thì Hãy Thoát Tool Này Ra Rồi Nhấn Lệnh x-ui Chữ Thường Như Vậy Rồi Chọn Số 3 Enter Sau Đó Chọn 0 Là Xong) "
+echo " 2. Cài SpeeTest Để Đo Tốc Độ VPS "
 echo " 3. Cài Tăng Tốc VPS "
-echo " 4. Kiểm Tra Tốc Độ VPS Ngay Bây Giờ ( cài dòng 2 mới kiểm tra được ) "
+echo " 4. Kiểm Tra Tốc Độ VPS Ngay Bây Giờ ( cài dòng 2 tức là đã cài Speddtest rồi thì mới kiểm tra được ) "
 echo " 5. Sửa Lổi Lệnh x-ui Không Hoạt Động Khi Chọn "
 echo " 6. Đổi Mật Khẩu Của VPS (tránh người ta biết ip VPS của bạn mà vào)
 echo " 7. Thoát "
@@ -21,7 +21,7 @@ echo " ▀▄▀▄▀▄    Gọi Cho Minh Duy Để Có Giá VPS Hợp Lý Nh�
 echo " ▀▄▀▄▀▄                                                                                          ▀▄▀▄▀▄ "
 echo " ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ "
 echo " "
-echo -n " Chọn Số Để Thực Hiện Chức Năng : "
+echo -n " Chọn Số Để Chúng Tôi Cài Đặt Cho Bạn (Lưu Ý Không Chọn Số Không Có Trong Chức Năng) Mời Bạn Nhập Số ==>>  "
 read so
 if [ $so -eq 1 ]
 then
@@ -53,7 +53,10 @@ then
 elif [ $so -eq 4 ]
 then
         clear
-        echo " Nếu Bạn Đã Cài Dòng 2 Thì Chúng Tôi Thực Hiện Kiểm Tra Liền Cho Bạn . Còn Bạn Chưa Cài Thì Chúng Tôi Không Kiểm Tra Tốc Độ Được "
+        echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ "
+        echo " Nếu Bạn Đã Cài Speedtest Rồi Thì Chúng Tôi Thực Hiện Kiểm Tra Liền Cho Bạn "
+        echo " Còn Bạn Chưa Cài Thì Chúng Tôi Không Kiểm Tra Tốc Độ Được . Và Bạn Phải Cài Speedtest Ở Dòng 2 "
+        echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ "
         echo " "
         speedtest
         ./menucaidat.sh
@@ -68,7 +71,7 @@ then
         clear
         echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ Bắt Đầu Đổi Mật Khẩu VPS Cho Bạn ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ "
         echo " ★★★ Mời Bạn Nhập Vào Mật Khẩu Và Xác Nhận Lại Mật Khẩu ★★★ "
-        echo " ★★★ Mật Khẩu Do Bảo Mật Nên Không Hiện Ra Nhưng Bạn Cứ Nhấn Chúng Tôi Bảo vệ Cá Nhân Cho Bạn ★★★ "
+        echo " ★★★ Mật Khẩu Do Bảo Mật Nên Không Hiện Ra Nhưng Bạn Cứ Nhấn Chúng Tôi Bảo Vệ Cá Nhân Cho Bạn ★★★ "
         echo " "
         echo " Bắt Đầu Nhập... "
         passwd
@@ -80,6 +83,8 @@ then
         echo " "
         echo " ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ Hẹn Gặp Lại Mọi Người Trong Lần Tới Chúng Tôi Phục Vụ Hết Mình Xin Chào ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ "
         echo " ███████████ Nếu Muốn Gọi Tôi Hãy Dùng Lệnh Như Ban Đầu Là : bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/TuTaoX-UI/master/menutrancuong.sh) ██████████ "
+        echo " "
+        echo " ★★★★★★★★★★★★★★★★★★★★★★★ Xin Chào Hẹn Gặp Lại ★★★★★★★★★★★★★★★★★★★★★★★ "
         echo " "
         rm menucaidat.sh
         exit        
