@@ -40,6 +40,6 @@ then
         rm menucaidat.sh
         exit        
 else
-        echo " COLOR [Light Red] Bạn Chọn Sai Số Không Có Trong Menu vui Lòng Chọn lại Để Chúng Tôi Phục Vụ Ạ "
+        COLOR [Light Red] echo " Bạn Chọn Sai Số Không Có Trong Menu vui Lòng Chọn lại Để Chúng Tôi Phục Vụ Ạ "
         ./menucaidat.sh
 fi
