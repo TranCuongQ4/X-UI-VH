@@ -23,13 +23,16 @@ read so
 if [ $so -eq 1 ]
 then
         bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/TuTaoX-UI/master/duybalai.sh)
+        ./menucaidat.sh
 elif [ $so -eq 2 ]
 then
         curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash
         sudo apt-get install speedtest
+        ./menucaidat.sh
 elif [ $so -eq 3 ]
 then
         bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/BBR/master/bbr.sh)
+        ./menucaidat.sh
 
 elif [ $so -eq 4 ]
 then
