@@ -40,6 +40,8 @@ then
         rm menucaidat.sh
         exit        
 else
-        COLOR [Light Red] echo " Bạn Chọn Sai Số Không Có Trong Menu vui Lòng Chọn lại Để Chúng Tôi Phục Vụ Ạ "
+        echo " ╠═══════════════════════════════════════════Chọn Số Không Phù Hợp Trong Bảng Điều Khiển═══════════════════════════════════════════╣ "
+        echo " "
+        echo " Bạn Chọn Sai Số Không Có Trong Menu Vui Lòng Chọn Lại Để Chúng Tôi Phục Vụ Ạ "
         ./menucaidat.sh
 fi
