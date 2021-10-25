@@ -7,13 +7,14 @@ echo " ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄�
 echo " "
 echo " .•♫•♬•.•♫•♬•.•♫•♬•.•♫•♬•.•♫•♬•.•♫•♬•.•♫•♬•Menu Cài Đặt VPS.•♫•♬•.•♫•♬•.•♫•♬•.•♫•♬•.•♫•♬•.•♫•♬• "
 echo " "
-echo " 1. Cài X-UI & Mở Các Port Cần Thiết (Lưu Ý Nếu Muốn Xoá X-Ui Thì Hãy Thoát Tool Này Ra Rồi Nhấn Lệnh x-ui Chữ Thường Như Vậy Rồi Chọn Số 3 Enter Sau Đó Chọn 0 Là Xong) "
+echo " 1. Cài X-UI & Mở Các Port Cần Thiết (nếu gặp lổi gì thì hãy xoá X-UI chọn ở mục 7) "
 echo " 2. Cài SpeeTest Để Đo Tốc Độ VPS "
 echo " 3. Cài Tăng Tốc VPS "
 echo " 4. Kiểm Tra Tốc Độ VPS Ngay Bây Giờ ( cài dòng 2 tức là đã cài Speddtest rồi thì mới kiểm tra được ) "
 echo " 5. Sửa Lổi Lệnh x-ui Không Hoạt Động Khi Chọn "
 echo " 6. Đổi Mật Khẩu Của VPS (tránh người ta biết ip VPS của bạn mà vào) "
-echo " 7. Thoát "
+echo " 7. Xoá X-UI "
+echo " 8. Thoát "
 echo " "
 echo " ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ "
 echo " ▀▄▀▄▀▄                                                                                          ▀▄▀▄▀▄ "
@@ -80,8 +81,19 @@ then
         echo " "
         echo " Chúc Mừng Bạn Đã Thay Đổi Mật Khẩu Thành Công Hãy Nhớ Và Không Cho Người Khác Biết Tránh Bị Mất VPS Nhé "
         echo " "
-        ./menucaidat.sh       
+        ./menucaidat.sh
 elif [ $so -eq 7 ]
+then
+        clear
+        echo " ★★★★★★★★★★★★★★★★★★★★★★★★★★★Chúng Tôi Thực Hiện Xoá X-UI Khỏi VPS★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ "
+        echo " Bạn Có Thật Muốn Xoá X-Ui Thì Nhấn y Là Đồng ý "
+        echo " Còn Nếu Bạn Muốn Giữ Lại Thì Nhấn n Là Chúng Tôi Sẽ Không Xoá "
+        echo " ★★★Hãy Suy Nghĩ Kĩ Và Chọn Lựa Nha★★★ "
+        echo " "
+        x-ui uninstall
+        echo " "
+        ./menucaidat.sh        
+elif [ $so -eq 8 ]
 then
         echo " "
         clear
