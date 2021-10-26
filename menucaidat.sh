@@ -1,30 +1,33 @@
 #!/usr/bin/bash
-echo " ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ "
-echo " ▀▄▀▄▀▄                          ▀▄▀▄▀▄ "
-echo " ▀▄▀▄▀▄ Trần Cường Thiết Kế Tool ▀▄▀▄▀▄ "
-echo " ▀▄▀▄▀▄                          ▀▄▀▄▀▄ "
-echo " ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ "
+echo " ☢☢☢☢☢☢ Trần Cường Thiết Kế Tool ☢☢☢☢☢☢ "
 echo " "
-echo " .•♫•♬•.•♫•♬Menu Cài Đặt VPS.•♫•♬•.• "
+echo " ☣✠☣✠☣✠Menu Cài Đặt VPS☣✠☣✠☣✠ "
 echo " "
+echo " ✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡ "
 echo " 1. Cài X-UI & Mở Các Port Cần Thiết (nếu gặp lổi gì thì hãy xoá X-UI chọn ở mục 7) "
+echo " "
 echo " 2. Cài SpeeTest Để Đo Tốc Độ VPS "
+echo " "
 echo " 3. Cài Tăng Tốc VPS "
+echo " "
 echo " 4. Kiểm Tra Tốc Độ VPS Ngay Bây Giờ ( cài dòng 2 tức là đã cài Speddtest rồi thì mới kiểm tra được ) "
+echo " "
 echo " 5. Sửa Lổi Lệnh x-ui Không Hoạt Động Khi Chọn "
+echo " "
 echo " 6. Đổi Mật Khẩu Của VPS (tránh người ta biết ip VPS của bạn mà vào) "
+echo " "
 echo " 7. Xoá X-UI "
+echo " "
 echo " 8. Đặt Lại User & Pass Trên X-UI Do Quên (Trở Về Mặc Định Là admin Hết) "
+echo " "
 echo " 9. Khởi Động Lại X-UI & VPS Cho Thoáng Băng Thông 4G (Lưu Ý Khi Khởi Động Lại VPS Sẽ Mất Kết Nối 20s Sau Đó Bạn Kết Nối VPS Lại Nhé) "
+echo " "
 echo " 0. Thoát "
+echo " ✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡ "
 echo " "
-echo " ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀ "
-echo " ▀▄▀▄▀▄                                             ▀▄▀▄▀ "
-echo " ▀▄▀▄▀▄Gọi Cho Minh Duy Giá VPS Hợp Lý: 0766884380  ▀▄▀▄▀ "
-echo " ▀▄▀▄▀▄                                             ▀▄▀▄▀ "
-echo " ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀ "
+echo " ☯☯☯☯☯☯ Gọi Cho Minh Duy Giá VPS Hợp Lý: 0766884380  ☯☯☯☯☯☯ "
 echo " "
-echo -n " Chọn Số Để Chúng Tôi Cài Đặt Mời Bạn Nhập Số :  "
+echo -n " ☣Chọn Số Để Chúng Tôi Cài Đặt Mời Bạn Nhập Số☣ :  "
 read so
 if [ $so -eq 1 ]
 then
@@ -58,10 +61,10 @@ then
 elif [ $so -eq 4 ]
 then
         clear
-        echo " ★★★★★★★★★★★★★★★★★★ "
+        echo " ☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯ "
         echo " Nếu Bạn Đã Cài Speedtest Rồi Thì Chúng Tôi Thực Hiện Kiểm Tra Liền Cho Bạn "
         echo " Còn Bạn Chưa Cài Thì Chúng Tôi Không Kiểm Tra Tốc Độ Được . Và Bạn Phải Cài Speedtest Ở Dòng 2 "
-        echo " ★★★★★★★★★★★★★★★★★★ "
+        echo " ☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯ "
         echo " "
         speedtest
         ./menucaidat.sh
@@ -100,9 +103,9 @@ then
         clear
         echo " ★★★Chúng Tôi Bắt Đầu Khôi Phục Lại User & Pass Cho Bạn★★★ "
         echo " User & Pass Sẽ trở Về Là admin Như Khi Mới Tạo X-UI "
-        echo " ███Bạn Chỉ Cần Nhấn 4 Cùng y Hai Lần Và Nhấn Thêm 0 Nữa Là Xong . Bấm Bậy Sẽ Hư Luôn X-UI Của Bạn███ "
+        echo " ☠☠☠Bạn Chỉ Cần Nhấn 4 Cùng y Hai Lần Và Nhấn Thêm 0 Nữa Là Xong . Bấm Bậy Sẽ Hư Luôn X-UI Của Bạn☠☠☠ "
         echo " Bắt Đầu Khôi Phục... "
-        echo " Nhớ Công Thức 4 - y - y - 0 Nhé "
+        echo " ☠☠☠Nhớ Công Thức 4 - y - y - 0 Nhé☠☠☠ "
         echo " "
         x-ui
         echo " "
@@ -113,7 +116,7 @@ elif [ $so -eq 9 ]
 then
         clear
         echo " ★★★Khởi Động VPS & X-UI★★★ "
-        echo " Đợi 20s Rồi Vào lại VPS Nhé "        
+        echo " Đợi 10s Rồi Vào lại VPS Nhé "        
         echo " Bắt Đầu Làm Thoáng Băng Thông... "        
         echo " "
         x-ui restart
@@ -121,14 +124,7 @@ then
         reboot
         exit               
 elif [ $so -eq 0 ]
-then
-        echo " "
-        clear
-        echo " "
-        echo " ▒▒▒▒Hẹn Gặp Lại Mọi Người Trong Lần Tới Chúng Tôi Phục Vụ Hết Mình Xin Chào▒▒▒▒ "
-        echo " ███Nếu Muốn Gọi Tôi Hãy Dùng Lệnh Như Ban Đầu Là : bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/TuTaoX-UI/master/menutrancuong.sh)███ "
-        echo " "
-        echo " ★★★Xin Chào Hẹn Gặp Lại★★★ "
+then         
         rm menucaidat.sh
         rm menucaidat.sh.1
         rm menucaidat.sh.2
@@ -140,12 +136,19 @@ then
         rm menucaidat.sh.8
         rm menucaidat.sh.9
         clear
+        echo " "
+        echo " ☸☸☸Hẹn Gặp Lại Mọi Người Trong Lần Tới Chúng Tôi Phục Vụ Hết Mình Xin Chào☸☸☸ "
+        echo " "
+        echo " ☸☸☸Nếu Muốn Gọi Tôi Hãy Dùng Lệnh Như Ban Đầu Là : bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/TuTaoX-UI/master/menutrancuong.sh)☸☸☸ "
+        echo " "
+        echo " ★★★Xin Chào Hẹn Gặp Lại★★★ "
         exit        
 else
         clear
-        echo " ╠═══Chọn Số Không Phù Hợp Trong Bảng Điều Khiển══╣ "
+        echo " ╠═══☬Chọn Số Không Phù Hợp Trong Bảng Điều Khiển☬══╣ "
         echo " "
-        echo " Bạn Chọn Sai Số Không Có Trong Menu Vui Lòng Chọn Lại Để Chúng Tôi Phục Vụ Ạ "
+        echo " ✜✜✜Bạn Chọn Sai Số Không Có Trong Menu✜✜✜ " 
+        echo " ✜✜✜Vui Lòng Chọn Số Có Trong Menu Ạ✜✜✜ "
         echo " "
         ./menucaidat.sh
 fi
