@@ -20,7 +20,7 @@ echo " 7. Xoá X-UI "
 echo " "
 echo " 8. Đặt Lại User & Pass Trên X-UI Do Quên (Trở Về Mặc Định Là admin Hết) "
 echo " "
-echo " 9. Khởi Động Lại X-UI & VPS Cho Thoáng Băng Thông 4G (Lưu Ý Khi Khởi Động Lại VPS Sẽ Mất Kết Nối 20s Sau Đó Bạn Kết Nối VPS Lại Nhé) "
+echo " 9. Khởi Động Lại X-UI & VPS Cho Thoáng Băng Thông 4G (Lưu Ý Khi Khởi Động Lại VPS Sẽ Mất Kết Nối 10s Sau Đó Bạn Kết Nối VPS Lại Nhé) "
 echo " "
 echo " 0. Thoát "
 echo " ✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡ "
@@ -142,12 +142,14 @@ then
         echo " ☸☸☸Nếu Muốn Gọi Tôi Hãy Dùng Lệnh Như Ban Đầu Là : bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/TuTaoX-UI/master/menutrancuong.sh)☸☸☸ "
         echo " "
         echo " ★★★Xin Chào Hẹn Gặp Lại★★★ "
+        echo " "
         exit        
 else
         clear
         echo " ╠═══☬Chọn Số Không Phù Hợp Trong Bảng Điều Khiển☬══╣ "
         echo " "
-        echo " ✜✜✜Bạn Chọn Sai Số Không Có Trong Menu✜✜✜ " 
+        echo " ✜✜✜Bạn Chọn Sai Số Không Có Trong Menu✜✜✜ "
+        echo " "
         echo " ✜✜✜Vui Lòng Chọn Số Có Trong Menu Ạ✜✜✜ "
         echo " "
         ./menucaidat.sh
