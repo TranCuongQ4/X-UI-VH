@@ -26,6 +26,7 @@ echo " 0. Thoát "
 echo " ✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡✡ "
 echo " "
 echo " ☯☯☯☯☯☯ Gọi Cho Minh Duy Giá VPS Hợp Lý: 0766884380  ☯☯☯☯☯☯ "
+echo " ✠✠✠ Vào Nhóm Chúng Tôi Giao Lưu https://www.facebook.com/groups/vpsanhem ✠✠✠ "
 echo " "
 echo -n " ☣Chọn Số Để Chúng Tôi Cài Đặt Mời Bạn Nhập Số☣ :  "
 read so
@@ -141,6 +142,7 @@ then
         echo " "
         echo " ☸☸☸Nếu Muốn Gọi Tôi Hãy Dùng Lệnh Như Ban Đầu Là : bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/TuTaoX-UI/master/menutrancuong.sh)☸☸☸ "
         echo " "
+        echo " ✠✠✠ Vào Nhóm Chúng Tôi Giao Lưu https://www.facebook.com/groups/vpsanhem ✠✠✠ "
         echo " ★★★Xin Chào Hẹn Gặp Lại★★★ "
         echo " "
         exit        
