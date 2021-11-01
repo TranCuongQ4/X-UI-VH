@@ -45,7 +45,7 @@ then
         echo " ★★★ Giờ Bạn Có Thể Vào Web Theo IP VPS :54321 Use Và Pass Đều Là Admin . Hãy Thay Đổi hết Các Thông Tin Đó Tránh Bị Mất ★★★ "
         echo " ★★★ Nhớ Đổi Cổng 54321 Thành Bất Kỳ Cổng Nào Nhớ Để 5 Đầu Nha . Ví Dụ 5xxxx ★★★ "
         echo " ★★★Chúc Bạn Dùng Internet Vui Vẻ Nhớ Giữ Sức Khoẻ★★★ " 
-        ./menucaidat.sh
+        bash menucaidat.sh
 elif [ $so -eq 2 ]
 then
         clear
@@ -58,7 +58,7 @@ then
         clear
         echo " ★★★Triển Khai Tăng Tốc Cho Bạn Nhấn Enter Để Tiếp Tục★★★ "
         bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/BBR/master/bbr.sh)
-        ./menucaidat.sh
+        bash menucaidat.sh
 elif [ $so -eq 4 ]
 then
         clear
@@ -68,7 +68,7 @@ then
         echo " ☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯☯ "
         echo " "
         speedtest
-        ./menucaidat.sh
+        bash menucaidat.sh
 elif [ $so -eq 5 ]
 then
         clear
@@ -87,7 +87,7 @@ then
         echo " "
         echo " Chúc Mừng Bạn Đã Thay Đổi Mật Khẩu Thành Công Hãy Nhớ Và Không Cho Người Khác Biết Tránh Bị Mất VPS Nhé "
         echo " "
-        ./menucaidat.sh
+        bash menucaidat.sh
 elif [ $so -eq 7 ]
 then
         clear
@@ -98,7 +98,7 @@ then
         echo " "
         x-ui uninstall
         echo " "
-        ./menucaidat.sh
+        bash menucaidat.sh
 elif [ $so -eq 8 ]
 then
         clear
@@ -112,7 +112,7 @@ then
         echo " "
         echo " Chúc Mừng Bạn Đã Khôi Phục User & Pass Về Là admin "
         echo " "
-        ./menucaidat.sh
+        bash menucaidat.sh
 elif [ $so -eq 9 ]
 then
         clear
@@ -154,5 +154,5 @@ else
         echo " "
         echo " ✜✜✜Vui Lòng Chọn Số Có Trong Menu Ạ✜✜✜ "
         echo " "
-        ./menucaidat.sh
+        bash menucaidat.sh
 fi
