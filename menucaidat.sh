@@ -52,7 +52,7 @@ then
         echo " ★★★Triển Khai Cài Đặt Speedtest Ngay★★★ "
         curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash
         sudo apt-get install speedtest
-        ./menucaidat.sh
+        bash menucaidat.sh
 elif [ $so -eq 3 ]
 then
         clear
@@ -74,7 +74,7 @@ then
         clear
         echo " ★★★Triển Khai Sửa Lệnh X-UI Cho Bạn★★★ "
         bash <(curl -Ls https://raw.githubusercontent.com/TranCuongQ4/X-UI/master/install.sh)        
-        ./menucaidat.sh
+        bash menucaidat.sh
 elif [ $so -eq 6 ]
 then
         clear
